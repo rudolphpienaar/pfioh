@@ -70,11 +70,11 @@ class MountDir(StoreHandler):
         """
 
         for k,v in kwargs.items():
-            if k== 'path': str_localPath= v 
-            if k== 'is_zip': b_zip= v
-            if k== 'cleanup': b_cleanup= v
-            if k== 'd_ret': d_ret= v
-            if k== 'key': key= v
+            if k == 'path':     str_localPath   = v 
+            if k == 'is_zip':   b_zip           = v
+            if k == 'cleanup':  b_cleanup       = v
+            if k == 'd_ret':    d_ret           = v
+            if k == 'key':      key             = v
     
         if b_zip:
             with zipfile.ZipFile('/tmp/{}.zip'.format(key), 'w', compression=zipfile.ZIP_DEFLATED) as zipfileObj:
