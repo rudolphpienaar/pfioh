@@ -91,6 +91,6 @@ class MountDir(StoreHandler):
         if b_cleanup:
             if b_zip:
                 self.dp.qprint("Removing '%s'..." % (fileToProcess), comms = 'status')
-                #if os.path.isfile(fileToProcess): os.remove(fileToProcess)
+                if os.path.isfile(fileToProcess): os.remove(fileToProcess)
 
         return d_ret
